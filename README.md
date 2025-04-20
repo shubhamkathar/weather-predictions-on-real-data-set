@@ -5,45 +5,74 @@ This project explores and forecasts the climate of Delhi using historical weathe
 📁 Dataset
 File used: DailyDelhiClimateTrain.csv
 Columns include:
+
 date: Date of observation
+
 meantemp: Mean temperature (°C)
+
 humidity: Humidity level
+
 wind_speed: Wind speed
+
 meanpressure: Atmospheric pressure
 
 🛠️ Libraries Used
 pandas, numpy: Data manipulation
+
 matplotlib, seaborn: Data visualization
+
 plotly.express: Interactive visualizations
+
 prophet: Forecasting model
+
 datetime: Date manipulation
 
 📈 Visual Explorations
+
 Line Graphs (Plotly):
+
 Mean Temperature, Humidity, and Wind Speed trends over time
+
 Scatter Plot:
+
 Relationship between humidity and temperature (with trendline)
+
 Year-wise Monthly Trends:
+
 Temperature change over years using Seaborn line plots
 
 🔮 Forecasting with Facebook Prophet
+
 Data formatted for Prophet with:
+
 ds → Date
+
 y → Mean temperature
+
 Forecast generated for 365 future days
+
 Humidity used as an external regressor to improve forecast accuracy
 
 📅 User-Specific Prediction
+
 User inputs a future date (e.g., 2024-03-31)
+
 The model predicts:
+
 Mean temperature (yhat)
+
 Lower and upper bounds (yhat_lower, yhat_upper)
+
 Predicted humidity (based on input or default)
 
 🌡️ Weather Description Engine
+
 Converts numerical predictions into understandable weather descriptions:
+
 Temperature: Mild, Warm, Hot, etc.
+
 Humidity: Dry, Moderately Humid, etc.
+
 Example:
 
 yaml
